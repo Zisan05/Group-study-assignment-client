@@ -21,12 +21,12 @@ const CreateAssignment = () => {
 
 
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen bg-orange-300">
   <div className="hero-content flex-col">
     <div className="text-center lg:text-left">
-      <h1 className=" text-4xl md:text-5xl lg:text-5xl font-bold">CREATE ASSIGNMENT </h1>
+      <h1 className=" text-4xl md:text-5xl lg:text-5xl font-bold text-violet-800">CREATE ASSIGNMENT </h1>
     </div>
-    <div className="card flex-shrink-0 w-[260px] md:w-[500px] lg:w-[500px] shadow-2xl bg-base-100">
+    <div className="card flex-shrink-0 w-[260px] md:w-[500px] lg:w-[500px] shadow-2xl bg-violet-300">
       <form onSubmit={handleCreateAssignment} className="card-body">
         <div className="form-control">
           <label className="label">
@@ -75,7 +75,7 @@ const CreateAssignment = () => {
         </div>
         
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Create Assignment</button>
+          <button className="btn bg-fuchsia-400">Create Assignment</button>
         </div>
       </form>
     </div>
