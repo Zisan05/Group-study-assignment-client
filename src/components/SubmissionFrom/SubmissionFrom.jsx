@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 const SubmissionFrom = () => {
     const submitData = useLoaderData();
 
-    const {_id,email,title,image,date,difficulty,description,marks} = submitData;
+    const {_id,email,title,marks} = submitData;
 
 const handleSubFrom = e => {
     e.preventDefault();
