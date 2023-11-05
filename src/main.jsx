@@ -17,6 +17,7 @@ import Assignment from './components/Assignments/Assignment';
 import DetailsPage from './components/DetailsPage/DetailsPage';
 import Privet from './components/Privat/Privat';
 import Update from './components/Update/Update';
+import SubmissionFrom from './components/SubmissionFrom/SubmissionFrom';
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,11 @@ const router = createBrowserRouter([
        path: "/update/:_id",
        element: <Update></Update>,
        loader: ({params}) => fetch(`http://localhost:5000/assignment/${params._id}`)
+      },
+      {
+        path: '/subfrom/:_id',
+        element: <SubmissionFrom></SubmissionFrom>,
+        loader: ({params}) => fetch(`http://localhost:5000/assignment/${params._id}`)
       },
       {
         path: "/register",

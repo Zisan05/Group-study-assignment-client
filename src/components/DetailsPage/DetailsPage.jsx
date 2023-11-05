@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const DetailsPage = () => {
@@ -21,7 +21,7 @@ const DetailsPage = () => {
           <p><span className="font-bold">Email:</span> {email}</p>
           <p><span className="font-bold">Difficulty:</span> {difficulty}</p>
           <div className="card-actions ">
-            <button className="btn bg-red-300">Take Assignment</button>
+            <Link to = {`/subfrom/${_id}`}><button className="btn bg-red-300">Take Assignment</button></Link>
           </div>
         </div>
       </div></div>
