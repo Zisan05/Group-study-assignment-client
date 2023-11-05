@@ -31,6 +31,7 @@ const Navbar = () => {
     <li><NavLink to = "/register">Register</NavLink></li>
     <li><NavLink to = "/login">Login</NavLink></li>
     <li><NavLink to = "/createassignment">CreateAssignment</NavLink></li>
+    <li><NavLink to = "/assignment">Assignment</NavLink></li>
     
     
     </>

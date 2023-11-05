@@ -89,7 +89,7 @@ const location = useLocation();
       
               <p className="mt-[10px]">First time in this website please<Link className="text-blue-500" to = {'/register'}> Register</Link></p>
               <div className="form-control mt-6">
-                <button className="btn bg-purple-400">Register</button>
+                <button className="btn bg-purple-400">Login</button>
                 <button onClick={handleGoogle} className="btn bg-blue-400">Google</button>
               </div>
             </form>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 
 const CreateAssignment = () => {
@@ -16,7 +17,29 @@ const CreateAssignment = () => {
         const date =form.date.value;
         
         
-        console.log(title,email,image,description,marks,difficulty,date);
+        const newAssignment = {title,email,image,description,marks,difficulty,date};
+        console.log(newAssignment);
+
+        fetch('http://localhost:5000/assignment',{
+            method:"POST",
+            headers: {
+                "content-type":"application/json"
+            },
+            body: JSON.stringify(newAssignment)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.acknowledged)
+            {
+                Swal.fire(
+                    'success',
+                    'Successfully added your assignment',
+                    'success'
+                  )
+            }
+            form.reset();
+        })
     }
 
 
