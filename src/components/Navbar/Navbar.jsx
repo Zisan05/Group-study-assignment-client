@@ -29,7 +29,7 @@ const Navbar = () => {
       <li><NavLink to="/assignment">Assignments</NavLink></li>
       <li><NavLink to="/createassignment">Create Assignment</NavLink></li>
       <li><NavLink to="/subassi">Submitted Assignments</NavLink></li>
-      <li><NavLink to="/myassi">My Assignments</NavLink></li>
+      <li><NavLink to="/myassignment">My Assignments</NavLink></li>
 
     </ul>
   ) : (
@@ -68,7 +68,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
         {
-      user ?<div className="md:flex lg:flex  gap-[10px]"><p className="my-auto font-bold text-[15px] text-purple-400">{user.displayName}</p><img className="h-[50px] w-[50px] rounded-[50%]" src={user.photoURL}></img><button className="btn bg-green-400" onClick={handleLogout}>Sign out</button></div>  :
+      user ?<div className="md:flex lg:flex  gap-[10px]"><p className="my-auto font-bold text-[15px] text-purple-400">{user.displayName}</p><img className="h-[50px] w-[50px] rounded-[50%]" src={user.photoURL}></img><Link to = {'/'}><button className="btn bg-green-400" onClick={handleLogout}>Sign out</button></Link></div>  :
       <button className="btn bg-purple-400"><Link to ={'/login'}>Log in </Link></button>
     }
         </div>

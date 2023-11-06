@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 const SubmissionFrom = () => {
     const submitData = useLoaderData();
 
-    const {_id,email,title,marks} = submitData;
+    const {_id,email,title,marks,image} = submitData;
 
 const handleSubFrom = e => {
     e.preventDefault();
@@ -18,6 +18,8 @@ const handleSubFrom = e => {
         const text =form.text.value;
 
         const newSubmit = {title,email,name,pdf,marks,text,status: "pending"};
+
+        const myNewSubmit = {title,email,name,pdf,marks,text,status: "pending"};
         console.log(newSubmit);
 
         fetch('http://localhost:5000/submit',{
@@ -26,6 +28,26 @@ const handleSubFrom = e => {
                 "content-type":"application/json"
             },
             body: JSON.stringify(newSubmit)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.acknowledged)
+            {
+                Swal.fire(
+                    'success',
+                    'Successfully added your assignment',
+                    'success'
+                  )
+            }
+            form.reset();
+        })
+        fetch('http://localhost:5000/my',{
+            method:"POST",
+            headers: {
+                "content-type":"application/json"
+            },
+            body: JSON.stringify(myNewSubmit)
         })
         .then(res => res.json())
         .then(data => {

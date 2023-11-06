@@ -20,6 +20,7 @@ import Update from './components/Update/Update';
 import SubmissionFrom from './components/SubmissionFrom/SubmissionFrom';
 import SubmittedAssignment from './components/SubmittedAssignment/SubmittedAssignment';
 import Givemark from './components/Givemark/Givemark';
+import MyAssignment from './components/MyAssignment/MyAssignment';
 
 const router = createBrowserRouter([
   {
@@ -78,7 +79,12 @@ const router = createBrowserRouter([
          path:'/givemark/:_id',
          element:<Givemark></Givemark>,
          loader: ({params}) => fetch(`http://localhost:5000/submit/${params._id}`)
+      },
 
+      {
+        path: '/myassignment',
+        element: <MyAssignment></MyAssignment>,
+        loader: () => fetch('http://localhost:5000/my') 
       },
 
 
