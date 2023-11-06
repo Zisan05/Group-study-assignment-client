@@ -41,7 +41,7 @@ console.log(newData);
     <p className="text-[20px]"><span className="font-bold">Examiner name:</span> {data.name}</p>
     <p className="text-[20px]"><span className="font-bold">Status:</span> {data.status}</p>
     <div className="card-actions justify-end">
-      <Link><button className="btn bg-orange-100">Give mark</button></Link>
+      <Link to ={`/givemark/${data._id}`}><button className="btn bg-orange-100">Give mark</button></Link>
     </div>
   </div>
 </div>
