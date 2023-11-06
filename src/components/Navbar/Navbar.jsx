@@ -25,7 +25,7 @@ const Navbar = () => {
   
   }
   const navItem = user ? (
-    <ul className="flex">
+    <ul className="lg:flex">
       <li><NavLink to="/assignment">Assignments</NavLink></li>
       <li><NavLink to="/createassignment">Create Assignment</NavLink></li>
       <li><NavLink to="/subassi">Submitted Assignments</NavLink></li>
@@ -34,7 +34,7 @@ const Navbar = () => {
     </ul>
   ) : (
 
-<ul className="flex">
+<ul className="lg:flex">
       <li><NavLink to="/">Home</NavLink></li>
       <li><NavLink to="/register">Register</NavLink></li>
       <li><NavLink to="/login">Login</NavLink></li>
