@@ -13,6 +13,8 @@ const location = useLocation();
 
     const {loginUser,GoogleUser} = useContext(AuthContext);
 
+
+
     const handleGoogle = () =>{
 
         GoogleUser()
@@ -24,6 +26,9 @@ const location = useLocation();
                   'Successfully added your account',
                   'success'
                 )
+                         
+          
+
         })
         .catch(error => {
              console.log(error.message)
@@ -51,6 +56,18 @@ const location = useLocation();
              'Successfully added your account',
              'success'
            )
+
+           fetch('http://localhost:5000/jwt',{
+            method: "POST",
+            credentials: 'include',
+            headers: {
+              "content-type" : "application/json"
+            },
+            body:JSON.stringify({email : email})
+           })
+           .then(res => res.json())
+           .then(data => console.log(data))
+
    })
    .catch(error => {
         console.log(error.message)
