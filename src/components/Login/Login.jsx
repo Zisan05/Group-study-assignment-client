@@ -11,7 +11,7 @@ const Login = () => {
 const location = useLocation();
      const navigate = useNavigate();
 
-    const {loginUser,GoogleUser} = useContext(AuthContext);
+    const {loginUser,GoogleUser,user} = useContext(AuthContext);
 
 
 
@@ -27,7 +27,16 @@ const location = useLocation();
                   'success'
                 )
                          
-          
+                fetch('http://localhost:5000/jwt',{
+                  method: "POST",
+                  credentials: 'include',
+                  headers: {
+                    "content-type" : "application/json"
+                  },
+                  body:JSON.stringify({email : user?.email})
+                 })
+                 .then(res => res.json())
+                 .then(data => console.log(data))
 
         })
         .catch(error => {

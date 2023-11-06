@@ -71,7 +71,7 @@ const router = createBrowserRouter([
       {
         path: '/subassi',
         element: <SubmittedAssignment></SubmittedAssignment>,
-        loader: () => fetch('http://localhost:5000/submit')   
+        loader: () => fetch('http://localhost:5000/submit',{credentials: "include"})   
       }, 
 
 

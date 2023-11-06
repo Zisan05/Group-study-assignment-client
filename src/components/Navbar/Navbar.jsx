@@ -18,6 +18,17 @@ const Navbar = () => {
            'Successfully logout from your account',
            'success'
          )
+         fetch('http://localhost:5000/logout',{
+          method: "POST",
+          credentials: 'include',
+          headers: {
+            "content-type" : "application/json"
+          },
+          body:JSON.stringify({email : user?.email})
+         })
+         .then(res => res.json())
+         .then(data => console.log(data))
+
   })
   .catch(error => {
     console.log(error)
