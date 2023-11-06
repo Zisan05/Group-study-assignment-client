@@ -24,17 +24,29 @@ const Navbar = () => {
   })
   
   }
+  const navItem = user ? (
+    <ul className="flex">
+      <li><NavLink to="/assignment">Assignments</NavLink></li>
+      <li><NavLink to="/createassignment">Create Assignment</NavLink></li>
+      <li><NavLink to="/subassi">Submitted Assignments</NavLink></li>
+      <li><NavLink to="/myassi">My Assignments</NavLink></li>
 
+    </ul>
+  ) : (
 
-    const navItem = <>
-    <li><NavLink to = "/">Home</NavLink></li>
-    <li><NavLink to = "/register">Register</NavLink></li>
-    <li><NavLink to = "/login">Login</NavLink></li>
-    <li><NavLink to = "/createassignment">CreateAssignment</NavLink></li>
-    <li><NavLink to = "/assignment">Assignment</NavLink></li>
+<ul className="flex">
+      <li><NavLink to="/">Home</NavLink></li>
+      <li><NavLink to="/register">Register</NavLink></li>
+      <li><NavLink to="/login">Login</NavLink></li>
+      <li><NavLink to="/assignment">Assignments</NavLink></li>
+    </ul>
+  );
+   
+     
     
     
-    </>
+    
+    
     return (
         <div className="navbar bg-sky-500 h-[100px]">
         <div className="navbar-start">
@@ -46,8 +58,8 @@ const Navbar = () => {
               {navItem}
             </ul>
           </div>
-          <span><img className="w-[50px] h-[50px] rounded-[50%]" src="https://i.ibb.co/WV56Jm3/the-study-logo-inspiration-college-logo-designs-vintage-logo-designs-vector.jpg" /></span>
-          <a className="btn btn-ghost normal-case text-xl font-bold text-purple-400">Know Yourself</a>
+          <span><Link to = {'/'}><img className="w-[50px] h-[50px] rounded-[50%]" src="https://i.ibb.co/WV56Jm3/the-study-logo-inspiration-college-logo-designs-vintage-logo-designs-vector.jpg" /></Link></span>
+          <Link to ={'/'}><a className="btn btn-ghost normal-case text-xl font-bold text-purple-400">Know Yourself</a></Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
