@@ -18,7 +18,7 @@ const SubmittedAssignment = () => {
             {
                 filteredData.map(data => <div key ={data._id} >
 
-<div className="card card-compact w-[300px] ml-[10px] md:ml-[40px] lg:ml-[30px] bg-orange-200 shadow-xl">
+<div className="card card-compact w-[300px] ml-[10px] md:ml-[40px] lg:ml-[100px] bg-orange-200 shadow-xl">
   <div className="card-body">
     <h2 className="card-title">Title: <span className="text-sky-500">{data.title}</span></h2>
     <p className="text-[20px]"><span className="font-bold">Email:</span> {data.email}</p>

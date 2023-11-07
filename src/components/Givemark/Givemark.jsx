@@ -19,7 +19,7 @@ const Givemark = () => {
 
         console.log(markUpdate);
 
-        fetch(`http://localhost:5000/submit/${_id}`,{
+        fetch(`https://group-study-assignment-server.vercel.app/submit/${_id}`,{
             method: 'PUT',
             headers: {
                 "content-type":"application/json"

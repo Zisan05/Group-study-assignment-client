@@ -18,7 +18,7 @@ const Navbar = () => {
            'Successfully logout from your account',
            'success'
          )
-         fetch('http://localhost:5000/logout',{
+         fetch('https://group-study-assignment-server.vercel.app/logout',{
           method: "POST",
           credentials: 'include',
           headers: {

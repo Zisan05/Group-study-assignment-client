@@ -42,49 +42,48 @@ const router = createBrowserRouter([
 
       {
         path: "/assignment",
-        element:<Assignment></Assignment>,
-        loader: () => fetch('http://localhost:5000/assignment') 
+        element:<Privet><Assignment></Assignment></Privet>,
       },
 
 
       {
        path: "/details/:_id",
        element: <Privet><DetailsPage></DetailsPage></Privet>,
-       loader: ({params}) => fetch(`http://localhost:5000/assignment/${params._id}`)
+       loader: ({params}) => fetch(`https://group-study-assignment-server.vercel.app/assignment/${params._id}`,{credentials: "include"})
       },
 
 
       {
        path: "/update/:_id",
        element: <Privet><Update></Update></Privet>,
-       loader: ({params}) => fetch(`http://localhost:5000/assignment/${params._id}`)
+       loader: ({params}) => fetch(`https://group-study-assignment-server.vercel.app/assignment/${params._id}`)
       },
 
 
       {
         path: '/subfrom/:_id',
         element: <SubmissionFrom></SubmissionFrom>,
-        loader: ({params}) => fetch(`http://localhost:5000/assignment/${params._id}`)
+        loader: ({params}) => fetch(`https://group-study-assignment-server.vercel.app/assignment/${params._id}`)
       },
 
 
       {
         path: '/subassi',
         element: <Privet><SubmittedAssignment></SubmittedAssignment></Privet>,
-        loader: () => fetch('http://localhost:5000/submit',{credentials: "include"})   
+        loader: () => fetch('https://group-study-assignment-server.vercel.app/submit',{credentials: "include"})   
       }, 
 
 
       {
          path:'/givemark/:_id',
          element:<Givemark></Givemark>,
-         loader: ({params}) => fetch(`http://localhost:5000/submit/${params._id}`)
+         loader: ({params}) => fetch(`https://group-study-assignment-server.vercel.app/submit/${params._id}`)
       },
 
       {
         path: '/myassignment',
         element: <MyAssignment></MyAssignment>,
-        loader: () => fetch('http://localhost:5000/my',{credentials: "include"}) 
+        loader: () => fetch('https://group-study-assignment-server.vercel.app/my',{credentials: "include"}) 
       },
 
 

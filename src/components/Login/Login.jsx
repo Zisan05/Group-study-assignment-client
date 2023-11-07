@@ -27,7 +27,7 @@ const location = useLocation();
                   'success'
                 )
                          
-                fetch('http://localhost:5000/jwt',{
+                fetch('https://group-study-assignment-server.vercel.app/jwt',{
                   method: "POST",
                   credentials: 'include',
                   headers: {
@@ -66,7 +66,7 @@ const location = useLocation();
              'success'
            )
 
-           fetch('http://localhost:5000/jwt',{
+           fetch('https://group-study-assignment-server.vercel.app/jwt',{
             method: "POST",
             credentials: 'include',
             headers: {

@@ -22,7 +22,7 @@ const handleSubFrom = e => {
         const myNewSubmit = {title,email,name,pdf,marks,text,status: "pending"};
         console.log(newSubmit);
 
-        fetch('http://localhost:5000/submit',{
+        fetch('https://group-study-assignment-server.vercel.app/submit',{
             method:"POST",
             headers: {
                 "content-type":"application/json"
@@ -42,7 +42,7 @@ const handleSubFrom = e => {
             }
             form.reset();
         })
-        fetch('http://localhost:5000/my',{
+        fetch('https://group-study-assignment-server.vercel.app/my',{
             method:"POST",
             headers: {
                 "content-type":"application/json"

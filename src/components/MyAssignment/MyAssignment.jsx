@@ -33,7 +33,7 @@ console.log(newData);
             {
                 newData.map(data => <div key = {data._id}>
                    
-                   <div className="card card-compact w-[300px] ml-[10px] md:ml-[40px] lg:ml-[30px] bg-zinc-500 shadow-xl mt-[20px]">
+                   <div className="card card-compact w-[300px] ml-[10px] md:ml-[40px] lg:ml-[100px] bg-zinc-500 shadow-xl mt-[20px]">
   <div className="card-body">
     <h2 className="card-title">Title: <span className="text-orange-300">{data.title}</span></h2>
     <p className="text-[20px]"><span className="font-bold">Email:</span> {data.email}</p>

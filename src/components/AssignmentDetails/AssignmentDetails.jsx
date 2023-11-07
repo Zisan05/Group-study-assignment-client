@@ -17,7 +17,7 @@ const {user} = useContext(AuthContext);
 const handleDelete = (id) => {
 
     if(email === user.email){
-        fetch(`http://localhost:5000/assignment/${id}`,{
+        fetch(`https://group-study-assignment-server.vercel.app/assignment/${id}`,{
         method: 'DELETE'
     })
     .then(res => res.json())
@@ -51,7 +51,7 @@ const handleDelete = (id) => {
 }
 
     return (
-        <div className="card w-[300px] bg-base-100 shadow-xl ml-[0px] md:ml-[50px] lg:ml-[35px] bg-green-200">
+        <div className="card w-[300px] md:w-[300px] lg:w-[400px] bg-base-100 shadow-xl ml-[0px] md:ml-[50px] lg:ml-[80px] bg-green-200 mt-[50px]">
   <figure><img className="h-[200px] w-full" src={image} /></figure>
   <div className="card-body">
     <h2 className="card-title"><span className="font-bold">Title:</span>{title}</h2>

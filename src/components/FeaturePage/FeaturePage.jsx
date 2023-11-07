@@ -2,9 +2,9 @@
 const FeaturePage = () => {
     return (
         <div>
-            <h1 className="text-[30px] font-bold text-center underline text-red-400 mt-[30px]">Our Purpose</h1>
+            <h1 className="text-[35px] font-bold text-center underline text-red-400 mt-[30px]">Our Purpose</h1>
 
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:ml-[30px] lg:ml-[60px] gap-[20px] mt-[30px]">
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:ml-[30px] lg:ml-[160px] gap-[20px] mt-[30px]">
         
             <div className="card card-compact w-[300px] bg-green-300 shadow-xl">
   <figure><img className="h-[170px] w-full" src="https://i.ibb.co/qrrvNSt/Knowledge-Management-Guidelines-Best-Practices.png" alt="Shoes" /></figure>
