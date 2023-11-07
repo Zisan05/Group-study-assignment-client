@@ -73,7 +73,7 @@ const CreateAssignment = () => {
           <label className="label">
             <span className="label-text">Marks</span>
           </label>
-          <input type="text" name="marks" placeholder="Marks" className="input input-bordered"/>
+          <input type="number" name="marks" placeholder="Marks" className="input input-bordered"/>
         </div>
         <div className="form-control">
           <label className="label">
@@ -94,7 +94,7 @@ const CreateAssignment = () => {
           <label className="label">
             <span className="label-text">Deu Date</span>
           </label>
-          <input type="text"  name="date" placeholder="deu date" className="input input-bordered"/>
+          <input type="date"  name="date" placeholder="deu date" className="input input-bordered"/>
         </div>
         
         <div className="form-control mt-6">

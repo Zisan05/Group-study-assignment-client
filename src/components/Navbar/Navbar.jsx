@@ -37,7 +37,7 @@ const Navbar = () => {
   }
   const navItem = user ? (
     <ul className="lg:flex">
-      <li><NavLink to="/assignment">Assignments</NavLink></li>
+      <li><NavLink to="/assignment">All Assignments</NavLink></li>
       <li><NavLink to="/createassignment">Create Assignment</NavLink></li>
       <li><NavLink to="/subassi">Submitted Assignments</NavLink></li>
       <li><NavLink to="/myassignment">My Assignments</NavLink></li>

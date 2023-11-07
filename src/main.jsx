@@ -56,7 +56,7 @@ const router = createBrowserRouter([
 
       {
        path: "/update/:_id",
-       element: <Update></Update>,
+       element: <Privet><Update></Update></Privet>,
        loader: ({params}) => fetch(`http://localhost:5000/assignment/${params._id}`)
       },
 
@@ -70,7 +70,7 @@ const router = createBrowserRouter([
 
       {
         path: '/subassi',
-        element: <SubmittedAssignment></SubmittedAssignment>,
+        element: <Privet><SubmittedAssignment></SubmittedAssignment></Privet>,
         loader: () => fetch('http://localhost:5000/submit',{credentials: "include"})   
       }, 
 
@@ -84,7 +84,7 @@ const router = createBrowserRouter([
       {
         path: '/myassignment',
         element: <MyAssignment></MyAssignment>,
-        loader: () => fetch('http://localhost:5000/my') 
+        loader: () => fetch('http://localhost:5000/my',{credentials: "include"}) 
       },
 
 

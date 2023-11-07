@@ -2,7 +2,7 @@
 const FeaturePage = () => {
     return (
         <div>
-            <h1 className="text-[30px] font-bold text-center underline text-red-400 mt-[30px]">Features</h1>
+            <h1 className="text-[30px] font-bold text-center underline text-red-400 mt-[30px]">Our Purpose</h1>
 
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:ml-[30px] lg:ml-[60px] gap-[20px] mt-[30px]">
         
