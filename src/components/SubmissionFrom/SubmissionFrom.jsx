@@ -72,7 +72,7 @@ const handleSubFrom = e => {
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold text-blue-300 mb-[30px]">Assignment submission from</h1>
           </div>
-          <div className="card flex-shrink-0 w-[500px] shadow-2xl bg-base-100 bg-blue-300">
+          <div className="card flex-shrink-0 w-[280px] md:w-[500px] lg:w-[500px] shadow-2xl bg-base-100 bg-blue-300">
             <form onSubmit={handleSubFrom} className="card-body">
               <div className="form-control">
                 <label className="label">

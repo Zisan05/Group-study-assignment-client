@@ -54,7 +54,7 @@ const location = useLocation();
 
    const email = e.target.email.value;
    const password = e.target.password.value;
-   console.log(email,password);
+   
       
        loginUser(email,password)
        .then(result => {
@@ -93,7 +93,7 @@ const location = useLocation();
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold text-yellow-300 mb-[30px]">Login now!</h1>
           </div>
-          <div className="card flex-shrink-0 w-[500px] shadow-2xl bg-base-100 bg-yellow-300">
+          <div className="card flex-shrink-0 w-[280px] md:w-[500px] lg:w-[500px] shadow-2xl bg-base-100 bg-yellow-300">
             <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">
                 <label className="label">

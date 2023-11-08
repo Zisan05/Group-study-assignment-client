@@ -42,7 +42,7 @@ const router = createBrowserRouter([
 
       {
         path: "/assignment",
-        element:<Privet><Assignment></Assignment></Privet>,
+        element:<Assignment></Assignment>,
       },
 
 
