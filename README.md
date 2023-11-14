@@ -1,5 +1,5 @@
 # Group-Study-Assignment 
-- [For client live link click here](https://group-study-assignment.web.app/)
+- [For client live link click here](divergent-monkey.surge.sh)
 
 
 Features of the project :
